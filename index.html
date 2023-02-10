@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCI CODE</title>
+    <style>
+        div{
+            border: 2px solid rgb(37, 36, 36);
+            height: 200px;
+            width: 100%;
+            margin-top: 50px;
+            background-color: rgba(248, 0, 0, 0.891);
+            justify-content: center;
+            border: none;
+        }
+        input{
+            padding:10px;
+            margin: 20px;
+            background-color: rgb(112, 108, 108);
+            color: rgb(245, 244, 240);
+            border:none;
+        }
+        button{
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        
+    </style>
+</head>
+
+<body><center>
+   <div class="container">
+    <input type="text" id="inputNumber">
+    <button id="submitBtn">Submit</button>
+    <p id="result"></p>
+    </div></center>
+    
+    <script>
+    var asciiCodes = {
+      1: "A",2: "B",3: "C",4: "D",
+      5: "E",6: "F",7: "G",8: "H",
+      9: "I",10: "J",11: "K",12: "L",
+      13: "M",14: "N",15: "O",16: "P",
+      17: "Q",18: "R",19: "S", 20: "T",
+      21: "U",22: "V", 23: "W",24: "X",
+      25: "Y",26: "Z"
+    };
+    
+    document.getElementById("submitBtn").addEventListener("click", function() {
+      var inputNumber = document.getElementById("inputNumber").value;
+      var result = document.getElementById("result");
+    
+      if (inputNumber >= 1 && inputNumber <= 26) {
+        result.innerHTML = asciiCodes[inputNumber];
+      } else {
+        result.innerHTML = "Invalid input. Please enter a number between 1 and 26.";
+      }
+    });
+    </script>
+
+
+
+</body>
+
+</html>
